@@ -94,25 +94,6 @@ function generateItinerary() {
             currentHour = 13;
             currentMinute = 0;
         }
-        
-        // Add dinner after the third attraction (only for 4 attractions)
-        if (index === 2 && checkboxes.length === 4) {
-            const dinnerTr = document.createElement("tr");
-            const dinnerTimeTd = document.createElement("td");
-            const dinnerActivityTd = document.createElement("td");
-            const dinnerDescTd = document.createElement("td");
-            
-            dinnerTimeTd.textContent = "下午 6:00 - 下午 7:00";
-            dinnerActivityTd.textContent = "晚餐";
-            dinnerDescTd.textContent = "品嚐北京地道小吃或高級中餐，享受美食之夜。";
-            
-            dinnerTr.appendChild(dinnerTimeTd);
-            dinnerTr.appendChild(dinnerActivityTd);
-            dinnerTr.appendChild(dinnerDescTd);
-            itineraryList.appendChild(dinnerTr);
-            currentHour = 19;
-            currentMinute = 0;
-        }
     });
 }
 
